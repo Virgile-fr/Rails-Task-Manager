@@ -1,0 +1,10 @@
+<h1>SHOW.</h1>
+<p><%= @task.title%> </p>
+<p><%= @task.details%> </p>
+<p><%= @task.completed%> </p>
+<p><%= @task.created_at%> </p>
+<p><%= @task.updated_at%> </p>
+
+<%=link_to "return to home", tasks_path %>
+<%=link_to "delete", task_path(@task), method: :delete %>
+<%=link_to "modify", task_edit_path(@task) %>

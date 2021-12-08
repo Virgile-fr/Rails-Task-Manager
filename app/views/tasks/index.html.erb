@@ -1,0 +1,17 @@
+<h1>Welcome.</h1>
+<h2>your daily tasks</h2>
+<div class="content_task" >
+<% @tasks.each do |element|%>
+<div class="task">
+<%= link_to(element) do %>
+<p><%= element.title%> </p>
+<p><%= element.details%> </p>
+<p><%= element.completed%> </p>
+<p><%= element.created_at%> </p>
+<p><%= element.updated_at%> </p>
+<% end %>
+</div>
+<% end %>
+</div>
+
+<h1> <%= link_to "new", tasks_new_path %>
